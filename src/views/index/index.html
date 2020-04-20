@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <%=require('html-loader!@/modules/html/html5shiv.html')%>
+    <script src="//at.alicdn.com/t/font_1761359_3878837oqu.js"></script>
+    <!-- baidu地图 -->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=rIGMc4PnbV2HPL3S9WKzEs0cbVLyQ4D0"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav id="nav" >
+        <div class="wrap" >
+            <img src="<%= require('@/images/logo.png')%>" alt="企业logo" class="logo" >
+            <div class="title-group" >
+                <h4>HTi</h4>
+                <p>No humiliation</p>
+            </div>
+            <svg class="icon icon-list" aria-hidden="true">
+                <use xlink:href="#icon-list"></use>
+            </svg>
+            <ul class="nav-list" >
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#service">服务</a></li>
+                <li><a href="#client">合作案例</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- banner模块 -->
+    <section class="banner" >
+        <img src="https://w.wallhaven.cc/full/42/wallhaven-42y2r9.jpg" alt="宣传图" >
+        <h1>
+            有死之荣   无生之辱
+            <br>
+            <p>No humiliation</p>
+        </h1>
+    </section>
+
+    <!-- 公司介绍 -->
+    <section class="company" id="about" >
+        <h2>关于公司</h2>
+        <article class="introduction" >
+            <h3>高效专业带来更优质的服务</h3>
+            <p>公司成立于2000年，于2010年在纽交所正式挂牌上市, 纽交所股票代码：BITTTA，作为中国领先的汽车互联网企业，公司为中国汽车用户提供专业、丰富的互联网资讯和导购服务，并为汽车厂商和汽车经销商提供卓有成效的互联网营销解决方案。</p>
+        </article>
+        <img src="https://w.wallhaven.cc/full/42/wallhaven-42y2r9.jpg" alt="宣传图" class="pic-introduction" >
+    </section>
+
+    <!-- 服务模块 -->
+    <section class="servive" id="service" >
+        <h2>服务</h2>
+        <article class="introduction" >
+            <h3>高效专业带来更优质的服务</h3>
+            <p>公司成立于2000年，于2010年在纽交所正式挂牌上市, 纽交所股票代码：BITTTA，作为中国领先的汽车互联网企业，公司为中国汽车用户提供专业、丰富的互联网资讯和导购服务，并为汽车厂商和汽车经销商提供卓有成效的互联网营销解决方案。</p>
+        </article>
+        <img src="https://w.wallhaven.cc/full/42/wallhaven-42y2r9.jpg" alt="宣传图" class="pic-introduction" >
+        <ul class="func-list" >
+            <li>
+                <h5>
+                    <svg class="icon " aria-hidden="true">
+                        <use xlink:href="#icon-cunqian"></use>
+                    </svg>
+                    <span>汽车报价大全</span>
+                </h5>
+                <p>为汽车消费者提供看车、选车、买车、用车、养车及与汽车生活相关的全面服务</p>
+            </li>
+            <li>
+                <h5>
+                    <svg class="icon " aria-hidden="true">
+                        <use xlink:href="#icon-yue"></use>
+                    </svg>
+                    <span>汽车报价大全</span>
+                </h5>
+                <p>为汽车消费者提供看车、选车、买车、用车、养车及与汽车生活相关的全面服务</p>
+            </li>
+            <li>
+                <h5>
+                    <svg class="icon " aria-hidden="true">
+                        <use xlink:href="#icon-jieqian"></use>
+                    </svg>
+                    <span>汽车报价大全</span>
+                </h5>
+                <p>为汽车消费者提供看车、选车、买车、用车、养车及与汽车生活相关的全面服务</p>
+            </li>
+            <li>
+                <h5>
+                    <svg class="icon " aria-hidden="true">
+                        <use xlink:href="#icon-huanqian"></use>
+                    </svg>
+                    <span>汽车报价大全</span>
+                </h5>
+                <p>为汽车消费者提供看车、选车、买车、用车、养车及与汽车生活相关的全面服务</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 相关客户 -->
+    <section class="client" id="client" >
+        <h2>客户</h2>
+        <article class="introduction" >
+            <h3>高效专业带来更优质的服务</h3>
+            <p>公司成立于2000年，于2010年在纽交所正式挂牌上市, 纽交所股票代码：BITTTA，作为中国领先的汽车互联网企业，公司为中国汽车用户提供专业、丰富的互联网资讯和导购服务，并为汽车厂商和汽车经销商提供卓有成效的互联网营销解决方案。</p>
+        </article>
+        <ul class="list" >
+            <li>
+                <svg class="icon " aria-hidden="true">
+                    <use xlink:href="#icon-logo02"></use>
+                </svg>
+            </li>
+            <li>
+                <svg class="icon " aria-hidden="true">
+                    <use xlink:href="#icon-logo1"></use>
+                </svg>
+            </li>
+            <li>
+                <svg class="icon " aria-hidden="true">
+                    <use xlink:href="#icon-logo"></use>
+                </svg>
+            </li>
+            <li>
+                <svg class="icon " aria-hidden="true">
+                    <use xlink:href="#icon-logo2"></use>
+                </svg>
+            </li>
+            <li>
+                <svg class="icon " aria-hidden="true">
+                    <use xlink:href="#icon-wunsun-logo"></use>
+                </svg>
+            </li>
+            <li>
+                <svg class="icon " aria-hidden="true">
+                    <use xlink:href="#icon-logo3"></use>
+                </svg>
+            </li>
+            <li>
+                <svg class="icon " aria-hidden="true">
+                    <use xlink:href="#icon-logo3"></use>
+                </svg>
+            </li>
+            <li>
+                <svg class="icon " aria-hidden="true">
+                    <use xlink:href="#icon-logo"></use>
+                </svg>
+            </li>
+            <li>
+                <svg class="icon " aria-hidden="true">
+                    <use xlink:href="#icon-logo2"></use>
+                </svg>
+            </li>
+            <li>
+                <svg class="icon " aria-hidden="true">
+                    <use xlink:href="#icon-wunsun-logo"></use>
+                </svg>
+            </li>
+            <li>
+                <svg class="icon " aria-hidden="true">
+                    <use xlink:href="#icon-wunsun-logo"></use>
+                </svg>
+            </li>
+            <li>
+                <svg class="icon " aria-hidden="true">
+                    <use xlink:href="#icon-logo3"></use>
+                </svg>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 联系我们 -->
+    <section class="contact" id="contact" >
+        <h2>联系我们</h2>
+        <article class="introduction" >
+            <h3>期待您的联系</h3>
+            <p>公司成立于2000年，于2010年在纽交所正式挂牌上市, 纽交所股票代码：BITTTA，作为中国领先的汽车互联网企业，公司为中国汽车用户提供专业、丰富的互联网资讯和导购服务，并为汽车厂商和汽车经销商提供卓有成效的互联网营销解决方案。</p>
+        </article>
+        <div id="address" ></div>
+        <ul class="address-detail" >
+            <li><span>电话</span><a href="tel:0771-6888777777">0771-6888777777</a></li>
+            <li><span>email</span><a href="mailto:info@qq.com">info@qq.com</a></li>
+            <li>
+                <span>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </span>beijingtiananmen
+            </li>
+            <li>
+                <span>
+                    <svg class="icon " aria-hidden="true">
+                        <use xlink:href="#icon-weixin"></use>
+                    </svg>
+                </span>
+                beijingtiananmen
+            </li>
+            <li><span>地址</span>北京天安门</li>
+        </ul>
+    </section>
+    
+    <hr class="hr-end" >
+
+
+    <!-- footer -->
+    <footer id="footer" >
+        <aside class="left" >
+            <h3>如果您有意合作，请在下面输入您的电子邮件，我们会尽快与您联系</h3>
+            <div class="input-box" >
+                <input type="text" >
+                <svg class="icon submit" aria-hidden="true">
+                    <use xlink:href="#icon-cc-arrow-right"></use>
+                </svg>
+            </div>
+        </aside>
+        <aside class="right" >
+            <nav class="nav" >
+                <ul>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#service">服务</a></li>
+                    <li><a href="#client">合作案例</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+            <p>粤ICP备18095649号-6 网络文化经营许可证：粤网文（2019）1177-288号</p>
+        </aside>
+    </footer>
+
+
+    <script>
+        // 初始化地图
+        var map = new BMapGL.Map("address");
+        // 创建地图实例 
+        var point = new BMapGL.Point(116.404, 39.915);
+        // 创建点坐标 
+        map.centerAndZoom(point, 15);
+        // 初始化地图，设置中心点坐标和地图级别
+    </script>
+
+</body>
+</html>

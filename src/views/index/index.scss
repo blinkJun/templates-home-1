@@ -1,0 +1,620 @@
+@import "@/style/_reset.scss";
+@import "@/style/_root.scss";
+@import "@/style/_extend.scss";
+
+// 全局icon
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/* 锚点跳转平滑滚动 */
+html,
+body {
+    scroll-behavior: smooth;
+    font-size:12px;
+}
+
+// 导航栏
+#nav {
+    width: 100%;
+    height: 88px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: all 0.2s 0s linear;
+    .wrap {
+        @extend %modulePosition;
+        @extend %clearFloat;
+        height: 100%;
+        position: relative;
+    }
+    .logo {
+        height: 50px;
+        vertical-align: middle;
+    }
+    .title-group {
+        height: 100%;
+        padding: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        h4 {
+            font-size: 24px;
+            line-height: 1.1em;
+            color: $fontPrimaryWhite;
+        }
+        p {
+            color: $fontDefaultWhite;
+        }
+    }
+    .nav-list {
+        float: right;
+        height: 100%;
+        padding: 20px 0;
+        transition: all 0.2s 0s ease;
+        li {
+            margin-left: 50px;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 16px;
+            a {
+                color: $fontDefaultWhite;
+            }
+        }
+        &:after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+    }
+    .icon-list {
+        display: none;
+    }
+    &.float {
+        background-color: #fff;
+        box-shadow: 0 1px 5px #eee;
+        .title-group {
+            h4 {
+                color: $fontPrimary;
+            }
+            p {
+                color: $fontSub;
+                font-size:12px;
+            }
+        }
+        .nav-list {
+            li a {
+                color: $fontPrimary;
+            }
+        }
+        .icon-list {
+            color: $fontPrimary;
+        }
+    }
+    @media (max-width: 1200px) {
+        height:66px;
+        .logo{
+            height:40px;
+        }
+        .title-group{
+            padding:10px;
+        }
+        .wrap {
+            max-width: 100%;
+        }
+        .nav-list {
+            position: absolute;
+            top: 95px;
+            right: 15px;
+            width: 120px;
+            height: auto;
+            padding: 5px 10px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 3px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2), -2px 2px 8px rgba(0, 0, 0, 0.2);
+            font-size: 0;
+            li {
+                margin-left: 0;
+                display: block;
+                margin: 15px 0;
+                color: $fontDefault;
+            }
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-20%);
+            &.show {
+                opacity: 1;
+                pointer-events: auto;
+                transform: none;
+                li a {
+                    color: $fontDefault;
+                }
+            }
+        }
+        .icon-list {
+            display: inline-block;
+            height: 35px;
+            font-size: 35px;
+            line-height: 1em;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            right: 15px;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+}
+// banner
+.banner {
+    width: 100%;
+    height: 100vh;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    h1 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 40%;
+        @extend %modulePosition;
+        margin: auto;
+        text-align: left;
+        color: #fff;
+    }
+    h1 {
+        font-size: 60px;
+        font-weight: bold;
+    }
+    p {
+        font-size: 30px;
+        text-align: justify;
+    }
+    @media (max-width: 1200px) {
+        h1,
+        p {
+            width: 100%;
+        }
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+}
+
+// 公司介绍
+.company {
+    @extend %modulePosition;
+    padding-top: 180px;
+    > h2 {
+        display: inline-block;
+        width: 30%;
+        height: 80px;
+        vertical-align: top;
+        font-size: 32px;
+        font-weight: bold;
+    }
+    > .introduction {
+        display: inline-block;
+        width: 65%;
+        padding-left: 50px;
+        height: 80px;
+        border-left: 1px solid #eee;
+        h3 {
+            font-size: 18px;
+            color: $fontDefault;
+        }
+        p {
+            margin-top: 5px;
+            color: $fontSub;
+        }
+    }
+    .pic-introduction {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        margin-top: 40px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    @media (max-width: 1200px) {
+        width: 100%;
+        padding-top: 80px;
+        > h2 {
+            width: 100%;
+        }
+        > .introduction {
+            width: 100%;
+            height: auto;
+            padding-left: 10px;
+        }
+        > .pic-introduction {
+            width: 100%;
+        }
+    }
+}
+
+//服务介绍
+.servive {
+    @extend %modulePosition;
+    padding-top: 180px;
+    > h2 {
+        display: inline-block;
+        width: 30%;
+        height: 80px;
+        vertical-align: top;
+        font-size: 32px;
+        font-weight: bold;
+    }
+    > .introduction {
+        display: inline-block;
+        width: 65%;
+        padding-left: 50px;
+        height: 80px;
+        border-left: 1px solid #eee;
+        h3 {
+            font-size: 18px;
+            color: $fontDefault;
+        }
+        p {
+            margin-top: 5px;
+            color: $fontSub;
+        }
+    }
+    .pic-introduction {
+        display: inline-block;
+        width: 30%;
+        height: 220px;
+        margin-top: 40px;
+        object-fit: cover;
+    }
+    .func-list {
+        display: inline-block;
+        margin-top: 40px;
+        width: 65%;
+        padding-left: 50px;
+        font-size: 0;
+        li {
+            width: 50%;
+            margin-bottom: 40px;
+            padding-right: 100px;
+            display: inline-block;
+            h5 {
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 15px;
+                    color: $fontDefault;
+                    margin-left: 15px;
+                    font-weight: normal;
+                }
+            }
+            p {
+                margin-top: 15px;
+                font-size: 12px;
+                color: $fontSub;
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+        width: 100%;
+        padding-top: 80px;
+        > h2 {
+            width: 100%;
+        }
+        > .introduction {
+            width: 100%;
+            height: auto;
+            padding-left: 10px;
+        }
+        > .pic-introduction {
+            width: 100%;
+            height:auto;
+        }
+        > .func-list {
+            width: 100%;
+            padding-left: 10px;
+            li {
+                padding-right: 10px;
+            }
+        }
+    }
+    @media (max-width: 420px) {
+        > .func-list {
+            li {
+                width: 100%;
+            }
+        }
+    }
+}
+// 相关客户
+.client {
+    @extend %modulePosition;
+    padding-top: 180px;
+    > h2 {
+        display: inline-block;
+        width: 30%;
+        height: 80px;
+        vertical-align: top;
+        font-size: 32px;
+        font-weight: bold;
+    }
+    > .introduction {
+        display: inline-block;
+        width: 65%;
+        padding-left: 50px;
+        height: 80px;
+        border-left: 1px solid #eee;
+        h3 {
+            font-size: 18px;
+            color: $fontDefault;
+        }
+        p {
+            margin-top: 5px;
+            color: $fontSub;
+        }
+    }
+    > .list {
+        width: 100%;
+        padding-top: 50px;
+        font-size: 0;
+        li {
+            display: inline-block;
+            width: 15%;
+            height: 100px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            margin-right: 1%;
+            margin-bottom: 20px;
+            text-align: center;
+            &::nth-child(6n) {
+                margin-right: 0;
+            }
+            .icon {
+                width: 50%;
+                height: 100%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            &:hover {
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1), -2px 2px 8px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+        width: 100%;
+        padding-top: 80px;
+        > h2 {
+            width: 100%;
+        }
+        > .introduction {
+            width: 100%;
+            height: auto;
+            padding-left: 10px;
+        }
+        > .pic-introduction {
+            width: 100%;
+        }
+        > .list {
+            li {
+                width: 32%;
+            }
+        }
+    }
+    @media (max-width: 420px) {
+        > .list {
+            li {
+                width: 49%;
+            }
+        }
+    }
+}
+// 联系
+.contact {
+    @extend %modulePosition;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    > h2 {
+        display: inline-block;
+        width: 30%;
+        height: 80px;
+        vertical-align: top;
+        font-size: 32px;
+        font-weight: bold;
+    }
+    > .introduction {
+        display: inline-block;
+        width: 65%;
+        padding-left: 50px;
+        height: 80px;
+        border-left: 1px solid #eee;
+        h3 {
+            font-size: 18px;
+            color: $fontDefault;
+        }
+        p {
+            margin-top: 5px;
+            color: $fontSub;
+        }
+    }
+    > #address {
+        width: 30%;
+        height: 200px;
+        margin-top: 40px;
+        display: inline-block;
+    }
+    .address-detail {
+        display: inline-block;
+        width: 65%;
+        padding-left: 50px;
+        padding-top: 20px;
+        margin-top: 40px;
+        vertical-align: top;
+        font-size: 0;
+        li {
+            width: 50%;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 30px;
+            color: $fontPrimary;
+            span {
+                color: $fontSub;
+                display: inline-block;
+                width: 150px;
+                .icon {
+                    width: 25px;
+                    height: 20px;
+                    vertical-align: middle;
+                }
+            }
+            a {
+                color: $fontPrimary;
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+        width: 100%;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        > h2 {
+            width: 100%;
+        }
+        > .introduction {
+            width: 100%;
+            height: auto;
+            padding-left: 10px;
+        }
+        > #address {
+            display: block;
+            width: 100%;
+        }
+        .address-detail {
+            width:100%;
+            padding:0 10px;
+            li {
+                display: inline-block;
+                width: 50%;
+                padding-right: 0;
+                span {
+                    width: 100px;
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .address-detail {
+            li {
+                width: 100%;
+            }
+        }
+    }
+}
+.hr-end {
+    width: 100%;
+    background-color: #eee;
+    border: none;
+    height: 1px;
+}
+footer {
+    @extend %modulePosition;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @extend %clearFloat;
+    aside.left {
+        width: 280px;
+        float: left;
+        h3 {
+            width: 100%;
+            color: $fontPrimary;
+        }
+        .input-box {
+            position: relative;
+            width: 100%;
+            margin-top: 20px;
+            input {
+                width: 100%;
+                height: 30px;
+                padding: 0 20px;
+                border: 1px solid #eee;
+                box-sizing: border-box;
+            }
+            .submit {
+                position: absolute;
+                top: 0;
+                right: 5px;
+                bottom: 0;
+                margin: auto;
+                width: 20px;
+                height: auto;
+                cursor: pointer;
+            }
+        }
+    }
+    aside.right {
+        width: 600px;
+        float: right;
+        .nav {
+            text-align: left;
+            font-size: 0;
+            li {
+                display: inline-block;
+                width: 25%;
+                font-size: 14px;
+                a {
+                    color: $fontPrimary;
+                }
+            }
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 40px;
+            vertical-align: middle;
+        }
+        p {
+            display: inline-block;
+            text-align: center;
+            color: $fontSub;
+            margin-top: 35px;
+        }
+    }
+    @media (max-width: 1200px) {
+        width: 100%;
+        aside.left {
+            float: none;
+            margin: 0 auto;
+        }
+        aside.right {
+            width: 100%;
+            float: none;
+            margin: 0 auto;
+            margin-top: 30px;
+            text-align: center;
+            .nav {
+                display: none;
+            }
+            .icon {
+                margin: 0;
+                padding: 0 20px;
+            }
+        }
+    }
+}
