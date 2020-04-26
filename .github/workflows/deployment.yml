@@ -46,10 +46,10 @@ jobs:
       
       # 发送消息
       - name: webhook
-      uses: joelwmale/webhook-action@master
-      env:
-        WEBHOOK_URL: ${{ secrets.webhook }}
-        data: "github actions finished"
+        uses: joelwmale/webhook-action@master
+        env: 
+          WEBHOOK_URL: ${{ secrets.webhook }}
+          data: "github actions finished"
         
   
 
