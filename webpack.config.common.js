@@ -23,7 +23,7 @@ function readDirHtmlListSync(pagesDirPath) {
     var htmlList = []
     // 循环遍历当前的文件以及文件夹
     pages.forEach(function (ele, index) {
-        const pageDirPath = pagesDirPath + "\\" + ele
+        const pageDirPath = pagesDirPath + "\/" + ele
         var info = fs.statSync(pageDirPath)
         if (info.isDirectory()) {
             const pageDirFileList = fs.readdirSync(pageDirPath);
@@ -38,7 +38,7 @@ function readDirHtmlListSync(pagesDirPath) {
                     const name  = nameItems.join('.')
                     return {
                         name:name,
-                        path:pageDirPath+'\\'+item
+                        path:pageDirPath+'\/'+item
                     }
                 })
             }else{
@@ -52,7 +52,7 @@ function readDirHtmlListSync(pagesDirPath) {
                     name:`${ele}.html`,
                     // 使用文件夹名称作为页面名，viewsHtmlWebpackPluginOptions中可使用此文件夹名称进行配置信息
                     pageName:ele,
-                    path:pageDirPath+'\\'+htmlIndex,
+                    path:pageDirPath+'\/'+htmlIndex,
                 }
                 htmlList.push(pageInfo)
             }
