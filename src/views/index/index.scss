@@ -583,6 +583,18 @@ body {
         .address-detail {
             li {
                 width: 100%;
+                font-size:0;
+                span{
+                    width:30%;
+                    font-size: 14px;
+                    vertical-align: top;
+                }
+                a{
+                    vertical-align: top;
+                    display: inline-block;
+                    width:70%;
+                    font-size: 14px;
+                }
             }
         }
     }
