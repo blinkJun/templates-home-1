@@ -2,7 +2,7 @@ name: page-deploy
 on: 
   push:
     branches:
-      - master
+      - chenjing
 jobs:
   build:
     runs-on : ubuntu-latest
