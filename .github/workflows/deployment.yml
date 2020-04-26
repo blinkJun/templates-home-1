@@ -45,7 +45,7 @@ jobs:
           rm: true
       
       # 发送消息
-      - name: Webhook
+      - name: webhook
       uses: joelwmale/webhook-action@master
       env:
         WEBHOOK_URL: ${{ secrets.webhook }}
