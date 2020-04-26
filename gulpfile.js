@@ -7,16 +7,22 @@ const buffer = require('vinyl-buffer');
 const imagemin = require('gulp-tinypng-nokey');
 
 const {sprites,minImages} = require('./views.config')
-const sptieDir = sprites.entry
+const spriteDir = sprites.entry
 const outPut = sprites.outPut
 const template = sprites.template
 const baseImagesPath = sprites.baseImagesPath
 
 // 合并图片
 gulp.task('sprite', function (done) {
-    let files = fs.readdirSync(sptieDir)
+    let spriteDirStat = fs.statSync(spriteDir)
+    if(!spriteDirStat.isDirectory()){
+        console.log('no sprites')
+        done()
+        return false;
+    }
+    let files = fs.readdirSync(spriteDir)
     files.forEach((spriteName) => {
-        const spritePath = path.resolve(sptieDir,spriteName)
+        const spritePath = path.resolve(spriteDir,spriteName)
         let fileStat = fs.statSync(spritePath)
         if (fileStat.isDirectory()) {
             const spriteFragments = spritePath+'/*.png';
