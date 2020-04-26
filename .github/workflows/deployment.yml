@@ -38,30 +38,11 @@ jobs:
           # 对应我们项目build的文件夹路径
           source: 'dist/*'  
           # 对应线上应该存放的地址
-          target: '/usr/local/nginx/html/templates/home/1' 
+          target: '/usr/local/nginx/html/templates/home/chenjing' 
           # 删除dist文件夹名称
           strip_components: 1
           # 删除target地址下的所有文件
           rm: true
-      
-      # 发送消息
-      - name: send dingtalk message
-        uses: ghostoy/dingtalk-action@master
-        with:
-          webhook: ${{ secrets.webhook}}
-          msgtype: markdown
-          content: |
-            {
-              "title": "上线：新版本部署完毕",
-              "text": "commit: ${{ github.sha }}"
-            }
-          at: |
-            {
-              "atMobiles": [
-                "1234567890"
-              ],
-              "isAtAll": false
-            }
         
   
 

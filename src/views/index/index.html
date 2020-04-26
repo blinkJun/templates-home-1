@@ -15,10 +15,11 @@
     <nav id="nav" >
         <div class="wrap" >
             <img src="<%= require('@/images/logo.png')%>" alt="企业logo" class="logo" >
-            <div class="title-group" >
+            <img src="<%= require('@/images/logo-dark.png')%>" alt="企业logo" class="logo-dark" >
+            <!-- <div class="title-group" >
                 <h4>HTi</h4>
                 <p>No humiliation</p>
-            </div>
+            </div> -->
             <svg class="icon icon-list" aria-hidden="true">
                 <use xlink:href="#icon-list"></use>
             </svg>
@@ -33,11 +34,15 @@
 
     <!-- banner模块 -->
     <section class="banner" >
-        <img src="https://w.wallhaven.cc/full/42/wallhaven-42y2r9.jpg" alt="宣传图" >
+        <img class="pc" src="<%= require('@/images/banner.jpg')%>" alt="宣传图" >
+        <img class="mobile" src="<%= require('@/images/banner-mobile.jpg')%>" alt="宣传图" >
         <h1>
-            有死之荣   无生之辱
+            CHANGE
             <br>
-            <p>No humiliation</p>
+            <p>
+                用匠人精神<br>
+                打造营销传播匠心之作
+            </p>
         </h1>
     </section>
 
@@ -45,127 +50,153 @@
     <section class="company" id="about" >
         <h2>关于公司</h2>
         <article class="introduction" >
-            <h3>高效专业带来更优质的服务</h3>
-            <p>公司成立于2000年，于2010年在纽交所正式挂牌上市, 纽交所股票代码：BITTTA，作为中国领先的汽车互联网企业，公司为中国汽车用户提供专业、丰富的互联网资讯和导购服务，并为汽车厂商和汽车经销商提供卓有成效的互联网营销解决方案。</p>
+            <h3>辰景丨CHANGE是一家创意营销服务机构。</h3>
+            <p>公司成立已有4年，总部位于广西南宁五象新区龙光国际，拥有专业的、高效率的创意策划团队、设计创新团队、东盟国家演绎表演团队、港澳台乐队等，综合性的创意策划及演绎表演团队。</p>
         </article>
-        <img src="https://w.wallhaven.cc/full/42/wallhaven-42y2r9.jpg" alt="宣传图" class="pic-introduction" >
+        <img src="<%= require('@/images/CHANGE-1200.jpg')%>" alt="宣传图" class="pic-introduction" >
     </section>
 
     <!-- 服务模块 -->
     <section class="servive" id="service" >
         <h2>服务</h2>
         <article class="introduction" >
-            <h3>高效专业带来更优质的服务</h3>
-            <p>公司成立于2000年，于2010年在纽交所正式挂牌上市, 纽交所股票代码：BITTTA，作为中国领先的汽车互联网企业，公司为中国汽车用户提供专业、丰富的互联网资讯和导购服务，并为汽车厂商和汽车经销商提供卓有成效的互联网营销解决方案。</p>
+            <h3>专业的技术服务团队</h3>
+            <p>我们提供品牌全案、创意设计、影视制作、商业拍摄、活动执行、会务接待、媒介采购、程序开发等整合营销服务。公司拥有专业高效的创意策划团队、创意设计团队、影视制作团队、程序开发团队。</p>
         </article>
-        <img src="https://w.wallhaven.cc/full/42/wallhaven-42y2r9.jpg" alt="宣传图" class="pic-introduction" >
+        <img src="<%= require('@/images/354x220.jpg')%>" alt="宣传图" class="pic-introduction" >
         <ul class="func-list" >
             <li>
                 <h5>
-                    <svg class="icon " aria-hidden="true">
-                        <use xlink:href="#icon-cunqian"></use>
-                    </svg>
-                    <span>汽车报价大全</span>
+                    <img src="<%= require('@/images/icon-design.png')%>" alt="宣传图" class="icon" >
+                    <span>丨品牌设计</span>
                 </h5>
-                <p>为汽车消费者提供看车、选车、买车、用车、养车及与汽车生活相关的全面服务</p>
+                <p>
+                    <span>商标设计</span>
+                    <span>名片设计</span>
+                    <span>画册设计</span><br>
+                    <span>LOGO设计</span>
+                    <span>易拉宝设计</span>
+                    <span>广告牌设计</span><br>
+                    <span>VI全套设计</span>
+                    <span>宣传单页设计</span>
+                    <span>广告宣传品设计</span><br>
+                </p>
             </li>
             <li>
                 <h5>
-                    <svg class="icon " aria-hidden="true">
-                        <use xlink:href="#icon-yue"></use>
-                    </svg>
-                    <span>汽车报价大全</span>
+                    <img src="<%= require('@/images/icon-create.png')%>" alt="宣传图" class="icon" >
+                    <span>丨营销策划</span>
                 </h5>
-                <p>为汽车消费者提供看车、选车、买车、用车、养车及与汽车生活相关的全面服务</p>
+                <p>
+                    <span>微信营销</span>
+                    <span>公关活动</span>
+                    <span>产品文案</span><br>
+                    <span>抖音营销</span>
+                    <span>微博营销</span>
+                    <span>整合营销</span><br>
+                    <span>微信文案</span>
+                    <span>演艺人员</span>
+                    <span>信息流广告</span><br>
+                </p>
             </li>
             <li>
                 <h5>
-                    <svg class="icon " aria-hidden="true">
-                        <use xlink:href="#icon-jieqian"></use>
-                    </svg>
-                    <span>汽车报价大全</span>
+                    <img src="<%= require('@/images/icon-video.png')%>" alt="宣传图" class="icon" >
+                    <span>丨影视动漫</span>
                 </h5>
-                <p>为汽车消费者提供看车、选车、买车、用车、养车及与汽车生活相关的全面服务</p>
+                <p>
+                    <span>3D动画</span>
+                    <span>图片后期</span>
+                    <span>淘宝视频</span><br>
+                    <span>视频特效</span>
+                    <span>剪辑配音</span>
+                    <span>产品拍摄</span><br>
+                    <span>视频定制</span>
+                    <span>手绘动画</span>
+                    <span>创意广告短片</span><br>
+                </p>
             </li>
             <li>
                 <h5>
-                    <svg class="icon " aria-hidden="true">
-                        <use xlink:href="#icon-huanqian"></use>
-                    </svg>
-                    <span>汽车报价大全</span>
+                    <img src="<%= require('@/images/icon-develop.png')%>" alt="宣传图" class="icon" >
+                    <span>丨程序开发</span>
                 </h5>
-                <p>为汽车消费者提供看车、选车、买车、用车、养车及与汽车生活相关的全面服务</p>
+                <p>
+                    <span>网站定制</span>
+                    <span>代理运营</span>
+                    <span>软件测试</span><br>
+                    <span>定制APP</span>
+                    <span>网站维护</span>
+                    <span>前端开发</span><br>
+                    <span>二次开发</span>
+                    <span>模板建站</span>
+                    <span>小程序开发</span><br>
+                </p>
             </li>
         </ul>
     </section>
 
     <!-- 相关客户 -->
     <section class="client" id="client" >
-        <h2>客户</h2>
+        <h2>战略合作伙伴</h2>
         <article class="introduction" >
             <h3>高效专业带来更优质的服务</h3>
-            <p>公司成立于2000年，于2010年在纽交所正式挂牌上市, 纽交所股票代码：BITTTA，作为中国领先的汽车互联网企业，公司为中国汽车用户提供专业、丰富的互联网资讯和导购服务，并为汽车厂商和汽车经销商提供卓有成效的互联网营销解决方案。</p>
+            <p>致力于打造横跨多平台的、新颖有互动性的、精准高品质的创意解决方案。公司业务涉及房地产、餐饮娱乐、政企、金融、科技、汽车、快消品等行业。</p>
         </article>
         <ul class="list" >
             <li>
-                <svg class="icon " aria-hidden="true">
-                    <use xlink:href="#icon-logo02"></use>
-                </svg>
+                <img src="<%= require('@/images/friends/客户LOGO-06.jpg')%>" alt="">
             </li>
             <li>
-                <svg class="icon " aria-hidden="true">
-                    <use xlink:href="#icon-logo1"></use>
-                </svg>
+                <img src="<%= require('@/images/friends/客户LOGO-07.jpg')%>" alt="">
             </li>
             <li>
-                <svg class="icon " aria-hidden="true">
-                    <use xlink:href="#icon-logo"></use>
-                </svg>
+                <img src="<%= require('@/images/friends/客户LOGO-08.jpg')%>" alt="">
             </li>
             <li>
-                <svg class="icon " aria-hidden="true">
-                    <use xlink:href="#icon-logo2"></use>
-                </svg>
+                <img src="<%= require('@/images/friends/客户LOGO-09.jpg')%>" alt="">
             </li>
             <li>
-                <svg class="icon " aria-hidden="true">
-                    <use xlink:href="#icon-wunsun-logo"></use>
-                </svg>
+                <img src="<%= require('@/images/friends/客户LOGO-10.jpg')%>" alt="">
             </li>
             <li>
-                <svg class="icon " aria-hidden="true">
-                    <use xlink:href="#icon-logo3"></use>
-                </svg>
+                <img src="<%= require('@/images/friends/客户LOGO-11.jpg')%>" alt="">
             </li>
             <li>
-                <svg class="icon " aria-hidden="true">
-                    <use xlink:href="#icon-logo3"></use>
-                </svg>
+                <img src="<%= require('@/images/friends/客户LOGO-12.jpg')%>" alt="">
             </li>
             <li>
-                <svg class="icon " aria-hidden="true">
-                    <use xlink:href="#icon-logo"></use>
-                </svg>
+                <img src="<%= require('@/images/friends/客户LOGO-13.jpg')%>" alt="">
             </li>
             <li>
-                <svg class="icon " aria-hidden="true">
-                    <use xlink:href="#icon-logo2"></use>
-                </svg>
+                <img src="<%= require('@/images/friends/客户LOGO-14.jpg')%>" alt="">
             </li>
             <li>
-                <svg class="icon " aria-hidden="true">
-                    <use xlink:href="#icon-wunsun-logo"></use>
-                </svg>
+                <img src="<%= require('@/images/friends/客户LOGO-15.jpg')%>" alt="">
             </li>
             <li>
-                <svg class="icon " aria-hidden="true">
-                    <use xlink:href="#icon-wunsun-logo"></use>
-                </svg>
+                <img src="<%= require('@/images/friends/客户LOGO-16.jpg')%>" alt="">
             </li>
             <li>
-                <svg class="icon " aria-hidden="true">
-                    <use xlink:href="#icon-logo3"></use>
-                </svg>
+                <img src="<%= require('@/images/friends/客户LOGO-17.jpg')%>" alt="">
+            </li>
+            <li>
+                <img src="<%= require('@/images/friends/客户LOGO-18.jpg')%>" alt="">
+            </li>
+            <li>
+                <img src="<%= require('@/images/friends/客户LOGO-19.jpg')%>" alt="">
+            </li>
+            <li>
+                <img src="<%= require('@/images/friends/客户LOGO-20.jpg')%>" alt="">
+            </li>
+            <li>
+                <img src="<%= require('@/images/friends/客户LOGO-21.jpg')%>" alt="">
+            </li>
+            <li>
+                <img src="<%= require('@/images/friends/客户LOGO-22.jpg')%>" alt="">
+            </li>
+            <li>
+                <img src="<%= require('@/images/friends/客户LOGO-23.jpg')%>" alt="">
             </li>
         </ul>
     </section>
@@ -179,24 +210,15 @@
         </article>
         <div id="address" ></div>
         <ul class="address-detail" >
-            <li><span>电话</span><a href="tel:0771-6888777777">0771-6888777777</a></li>
-            <li><span>email</span><a href="mailto:info@qq.com">info@qq.com</a></li>
+            <li><span>服务热线：</span><a href="tel:0771-48977725">0771-48977725</a></li>
+            <li><span>邮箱：</span><a href="mailto:3430918928@qq.com">3430918928@qq.com</a></li>
+            <li><span>地址：</span>广西南宁五象新区龙光国际B栋2020室</li>
             <li>
                 <span>
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-weibo"></use>
-                    </svg>
-                </span>beijingtiananmen
-            </li>
-            <li>
-                <span>
-                    <svg class="icon " aria-hidden="true">
-                        <use xlink:href="#icon-weixin"></use>
-                    </svg>
+                    微信公众号：
                 </span>
-                beijingtiananmen
+                辰景号
             </li>
-            <li><span>地址</span>北京天安门</li>
         </ul>
     </section>
     
@@ -232,7 +254,7 @@
         // 初始化地图
         var map = new BMapGL.Map("address");
         // 创建地图实例 
-        var point = new BMapGL.Point(116.404, 39.915);
+        var point = new BMapGL.Point(108.379024,22.77294);
         // 创建点坐标 
         map.centerAndZoom(point, 15);
         // 初始化地图，设置中心点坐标和地图级别
