@@ -16,6 +16,7 @@
 /* 锚点跳转平滑滚动 */
 html,
 body {
+    overflow-x: hidden;
     scroll-behavior: smooth;
     font-size:12px;
 }
