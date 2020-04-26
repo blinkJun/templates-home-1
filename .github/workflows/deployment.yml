@@ -43,10 +43,8 @@ jobs:
           strip_components: 1
           # 删除target地址下的所有文件
           rm: true
-  message: 
-    needs: build
-    name: post message to ding
-    steps:
+      
+      # 发送消息
       - name: Webhook
       uses: joelwmale/webhook-action@master
       env:
