@@ -24,7 +24,7 @@ jobs:
       
       # 利用action把build好的文件上传到服务器/var/www/react-app路径下,需要确认此目录已在服务端创建
       - name: deploy file to server
-        uses: blinkJun/SFTP-Deploy-Action@v3.0 
+        uses: blinkJun/SFTP-Deploy-Action@v4.0 
         with:  
           username: 'root'   #ssh user name
           server: '${{ secrets.SERVER_IP }}' #引用之前创建好的secret
