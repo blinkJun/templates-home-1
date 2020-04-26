@@ -197,7 +197,6 @@ body {
     p {
         padding:0 0 0 30px;
         font-size: 40px;
-        font-size:40px;
         text-align: justify;
         position: relative;
         &:after{
@@ -219,13 +218,23 @@ body {
             width: 100%;
         }
         h1 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 24px;
+        }
+    }
+    @media (max-width: 420px) {
+        h1,
+        p {
+            width: 100%;
+        }
+        h1 {
             font-size: 30px;
         }
         p {
             font-size: 15px;
         }
-    }
-    @media (max-width: 420px) {
         img.pc{
             display: none;
         }
