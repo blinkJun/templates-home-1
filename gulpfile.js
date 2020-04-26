@@ -14,8 +14,7 @@ const baseImagesPath = sprites.baseImagesPath
 
 // 合并图片
 gulp.task('sprite', function (done) {
-    let spriteDirStat = fs.statSync(spriteDir)
-    if(!spriteDirStat.isDirectory()){
+    if (!fs.existsSync(spriteDir)) {
         console.log('no sprites')
         done()
         return false;
