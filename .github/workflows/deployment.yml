@@ -45,15 +45,23 @@ jobs:
           rm: true
       
       # 发送消息
-      - name: webhook
-        uses: joelwmale/webhook-action@master
-        env: 
-          WEBHOOK_URL: ${{ secrets.webhook }}
-          data: "{'msgtype': 'text', 
-            'text': {
-                'content': 'github actions:上线'
+      - name: send dingtalk message
+        uses: ghostoy/dingtalk-action@master
+        with:
+          webhook: ${{ secrets.webhook}}
+          msgtype: markdown
+          content: |
+            {
+              "title": "上线：新版本部署完毕",
+              "text": "commit: ${{ github.sha }}"
             }
-          }"
+          at: |
+            {
+              "atMobiles": [
+                "1234567890"
+              ],
+              "isAtAll": false
+            }
         
   
 
