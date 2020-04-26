@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - master
-    paths:
-      - './src/**/*'
 jobs:
   build:
     runs-on : ubuntu-latest
@@ -45,6 +43,15 @@ jobs:
           strip_components: 1
           # 删除target地址下的所有文件
           rm: true
+  message: 
+    needs: build
+    name: post message to ding
+    steps:
+      - name: Webhook
+      uses: joelwmale/webhook-action@master
+      env:
+        WEBHOOK_URL: ${{ secrets.webhook }}
+        data: "github actions finished"
         
   
 
