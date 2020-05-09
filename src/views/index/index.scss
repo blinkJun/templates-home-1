@@ -665,8 +665,11 @@ footer {
         p {
             display: inline-block;
             text-align: center;
-            color: $fontSub;
+            
             margin-top: 35px;
+            a{
+                color: $fontSub;
+            }
         }
     }
     @media (max-width: 1200px) {
