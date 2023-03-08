@@ -1,3 +1,4 @@
-# templates-home-1
+# 官网模板
 
-## demo(http://120.24.43.205/templates/home/1)
+## `chenjing`分支
+该分支为模板实例，点击查看[demo](https://blinkjun.github.io/templates-home-1/)
